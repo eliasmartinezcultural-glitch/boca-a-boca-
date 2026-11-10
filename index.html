@@ -69,11 +69,21 @@
     </section>
 
     <section class="join-section" id="sumar">
-      <div class="join-copy"><span class="kicker light-kicker">LA AGENDA CRECE CON VOS</span><h2>¿Ofrecés un oficio<br>o un <em>servicio?</em></h2><p>Queremos sumar trabajadores, profesionales, comercios y empresas de San Patricio y de localidades cercanas que trabajen en la zona.</p><div class="join-note"><span>✓</span> Alta básica gratuita, con revisión previa y autorización.</div></div>
-      <div class="join-card"><div class="join-card-top"><span class="join-icon">＋</span><span class="join-label">SUMÁ TU CONTACTO</span></div><h3>Tu trabajo merece<br>ser encontrado.</h3><p>Estamos preparando el canal de inscripción para recibir tus datos y publicarlos con tu autorización.</p><div class="join-status"><span></span> Incorporación de contactos en preparación</div><a href="https://github.com/eliasmartinezcultural-glitch/boca-a-boca-" target="_blank" rel="noopener">Conocer el proyecto ↗</a></div>
+      <div class="join-copy"><span class="kicker light-kicker">LA AGENDA CRECE CON VOS</span><h2>¿Ofrecés un oficio<br>o un <em>servicio?</em></h2><p>Sumate a la agenda local. Completá tres datos y tu contacto quedará publicado automáticamente, sin esperar una aprobación.</p><div class="join-note"><span>✓</span> Alta gratuita · Publicación inmediata · Sin cuenta</div><p class="privacy-note">Al publicar, autorizás que tu nombre, oficio y teléfono sean visibles para cualquier persona que visite Boca a Boca.</p></div>
+      <div class="join-card"><div class="join-card-top"><span class="join-icon">＋</span><span class="join-label">PUBLICÁ TU CONTACTO</span></div><h3>Que te encuentren<br>por lo que hacés.</h3>
+        <form id="signupForm" class="signup-form">
+          <label for="signupName">Tu nombre</label><input id="signupName" name="nombre" type="text" maxlength="70" placeholder="Cómo querés aparecer" autocomplete="name" required>
+          <label for="signupTrade">¿Qué oficio o servicio ofrecés?</label><input id="signupTrade" name="oficio" type="text" maxlength="90" placeholder="Ej.: electricista, costurera, fletes" required>
+          <label for="signupPhone">Tu teléfono / WhatsApp</label><input id="signupPhone" name="telefono" type="tel" maxlength="25" placeholder="Ej.: 299 555 1234" autocomplete="tel" required>
+          <div class="signup-trap" aria-hidden="true"><label for="signupWebsite">Dejar vacío</label><input id="signupWebsite" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <label class="signup-consent"><input id="signupConsent" type="checkbox" required><span>Autorizo que estos tres datos se publiquen y sean visibles públicamente.</span></label>
+          <button class="signup-submit" type="submit">PUBLICAR MIS DATOS <span>↗</span></button>
+          <p id="signupMessage" class="signup-message" role="status" aria-live="polite">La publicación automática estará disponible cuando se conecte la base de datos.</p>
+        </form>
+      </div>
     </section>
   </main>
   <footer class="footer"><div class="footer-main"><a class="brand footer-brand" href="#"><span class="brand-symbol">b.</span><span class="brand-name">boca<span>a</span>boca<small>AGENDA LOCAL</small></span></a><p>El contacto que buscás, más cerca.</p><a href="#agenda" class="back-top">Volver arriba ↑</a></div><div class="footer-bottom"><span>© 2026 Boca a Boca · San Patricio del Chañar</span><span>Iniciativa independiente · Desarrollada por Elías Martínez / Ocarina Producciones</span></div></footer>
-  <script src="agenda.js"></script><script src="app.js"></script>
+  <script src="agenda.js"></script><script src="app.js"></script><script src="supabase-config.js"></script><script src="registro.js"></script>
 </body>
 </html>
