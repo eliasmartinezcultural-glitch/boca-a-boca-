@@ -39,7 +39,7 @@ function renderProviders(){
  const term=normalize(input.value.trim());
  const list=(data.prestadores||[]).filter(p=>{
   const searchable=normalize([p.nombre,p.rubro,p.localidad,p.descripcion,p.tipo].join(" "));
-  const categoryMatch=!selectedCategory||normalize(p.rubro).includes(normalize(selectedCategory))||searchable.includes(normalize(selectedCategory));
+  const selected=categories.find(c=>c.name===selectedCategory);\n  const categoryTerms=selected?selected.terms.split(" "):[];\n  const categoryMatch=!selectedCategory||normalize(p.rubro).includes(normalize(selectedCategory))||categoryTerms.some(term=>searchable.includes(normalize(term)));
   return categoryMatch&&(!term||searchable.includes(term));
  }).sort((a,b)=>Number(Boolean(b.local))-Number(Boolean(a.local))||Number(Boolean(b.destacado))-Number(Boolean(a.destacado))||String(a.nombre).localeCompare(String(b.nombre),"es"));
  count.textContent=list.length+" "+(list.length===1?"contacto":"contactos");
