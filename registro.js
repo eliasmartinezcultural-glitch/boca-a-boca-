@@ -3,14 +3,14 @@
  const message=document.getElementById("signupMessage"),cfg=window.BOCA_SUPABASE||{};
  const ready=Boolean(cfg.url&&cfg.anonKey),endpoint=ready?cfg.url.replace(/\/$/,"")+"/rest/v1/prestadores":null;
  function say(t,c){message.textContent=t;message.className="signup-message "+(c||"");}
- function digits(v){return String(v||"").replace(/[^0-9]/g,"");}
+ function digits(v){let n=String(v||"").replace(/[^0-9]/g,"");if(n.length===10)n="549"+n;return n;}
  async function load(){
   if(!ready)return;
   try{
    const r=await fetch(endpoint+"?select=nombre,oficio,telefono,created_at&order=created_at.desc",{headers:{apikey:cfg.anonKey,Authorization:"Bearer "+cfg.anonKey}});
    if(!r.ok)throw Error("load");
    const rows=await r.json();window.BOCA_DATA=window.BOCA_DATA||{prestadores:[],anuncios:[]};
-   window.BOCA_DATA.prestadores=rows.map(x=>({nombre:x.nombre,rubro:x.oficio,whatsapp:digits(x.telefono),local:false,localidad:"San Patricio del Chañar y alrededores",descripcion:"Contacto publicado por su titular.",destacado:false}));
+   window.BOCA_DATA.prestadores=rows.map(x=>({nombre:x.nombre,rubro:x.oficio,whatsapp:digits(x.telefono),local:false,agenda:true,localidad:"San Patricio del Chañar y alrededores",descripcion:"Contacto publicado por su titular.",destacado:false}));
    if(window.bocaRenderProviders)window.bocaRenderProviders();
   }catch(e){say("No pudimos cargar los contactos en este momento. Probá nuevamente más tarde.","error");}
  }
