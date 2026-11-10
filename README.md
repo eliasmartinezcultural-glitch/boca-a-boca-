@@ -62,3 +62,16 @@ La imagen debe existir dentro del repositorio y el enlace debe ser proporcionado
 GitHub Pages sirve archivos estáticos: no recibe ni almacena altas por sí solo. En esta primera etapa los contactos se revisan y se agregan manualmente a `agenda.js`. Para automatizar el ingreso habrá que conectar un formulario externo o un servicio de datos. No anunciar que un formulario está activo hasta probarlo de punta a punta.
 
 Desarrollado por Elías Martínez / Ocarina Producciones.
+
+ 
+## Alta automática (preparada, pendiente de activar)
+El formulario público pide solo nombre, oficio y teléfono. Al enviar, inserta el registro en Supabase y lo muestra en la agenda sin revisión manual.
+
+### Para activarlo
+1. Crear un proyecto en Supabase.
+2. Abrir SQL Editor y ejecutar el contenido de `supabase.sql`.
+3. En Project Settings > API, copiar Project URL y la clave anon/public.
+4. Pegarlas en `supabase-config.js` en los campos `url` y `anonKey`.
+5. Publicar los cambios y probar un alta real desde un celular.
+
+**Importante:** la publicación es pública e inmediata. El teléfono queda visible para cualquiera. La clave anon es la única permitida en el sitio; nunca publicar la clave `service_role`. Las políticas SQL permiten lectura e inserción públicas, pero no edición ni eliminación. Esto no evita por completo spam o datos falsos; antes de difundir ampliamente conviene añadir protección anti-spam y un mecanismo de denuncia/baja.
