@@ -1,81 +1,25 @@
 <!doctype html>
-<html lang="es-AR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#173f35">
-  <meta name="description" content="El boca a boca digital de San Patricio del Chañar. Encontrá oficios, compartí recomendaciones y conectá con vecinos.">
-  <title>Boca a Boca | San Patricio del Chañar</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="topline"><span>HECHO EN EL CHAÑAR</span><span>Una comunidad que se da una mano</span></div>
-  <header class="site-header">
-    <a class="brand" href="#" aria-label="Boca a Boca, inicio">
-      <span class="brand-mark">↗</span>
-      <span><strong>boca<span>a</span>boca</strong><small>SAN PATRICIO DEL CHAÑAR</small></span>
-    </a>
-    <nav class="desktop-nav" aria-label="Navegación principal">
-      <a href="#explorar">Explorar</a><a href="#comunidad">La comunidad</a><a href="#publicar">Publicar</a>
-    </nav>
-    <a class="header-cta" href="#publicar">Sumarme <span>＋</span></a>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="live-dot"></span> EL CHAÑAR SE CONECTA</div>
-        <h1>Lo que necesitás.<br><em>Alguien de acá</em><br>lo puede hacer.</h1>
-        <p>El boca a boca de siempre, ahora en un solo lugar. Encontrá un oficio, recomendá a alguien o proponé un intercambio con tus vecinos.</p>
-        <a class="hero-link" href="#explorar">Conocer la comunidad <span>↓</span></a>
-      </div>
-      <div class="hero-art" aria-label="Ilustración de conexiones entre vecinos">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="sun"></div>
-        <div class="art-card card-top"><span>🔧</span><div><b>Un oficio</b><small>que resuelve</small></div></div>
-        <div class="art-card card-bottom"><span>🤝</span><div><b>Una mano</b><small>que aparece</small></div></div>
-        <div class="art-center"><span>CH</span><small>ENTRE<br>VECINOS</small></div>
-        <span class="spark spark-a">✳</span><span class="spark spark-b">✳</span>
-      </div>
-    </section>
-
-    <section class="search-wrap" id="explorar">
-      <div class="search-heading"><div><span class="section-kicker">EMPEZÁ POR ACÁ</span><h2>¿Qué estás buscando?</h2></div><span class="local-tag">📍 San Patricio del Chañar</span></div>
-      <div class="searchbar"><span class="search-icon">⌕</span><input id="searchInput" type="search" placeholder="Ej.: vidriero, zapatero, cortar el pasto..." aria-label="Buscar oficios y servicios"><button id="searchButton">Buscar <span>→</span></button></div>
-      <div class="quick-categories" id="quickCategories"></div>
-      <div class="results-head"><div><h3>Explorá por oficio o tarea</h3><p id="resultCount">Categorías disponibles para buscar</p></div><button class="text-button" id="clearSearch">Ver todas <span>↗</span></button></div>
-      <div class="category-grid" id="categoryGrid"></div>
-      <div class="empty-results" id="emptyResults" hidden>No encontramos esa categoría. Probá con otra palabra o <a href="#comunidad">preguntale a la comunidad</a>.</div>
-    </section>
-
-    <section class="community-section" id="comunidad">
-      <div class="community-intro"><span class="section-kicker light">MÁS QUE UN DIRECTORIO</span><h2>El intercambio<br>también hace<br><em>comunidad.</em></h2><p>No todo tiene que ser por plata. A veces alguien tiene lo que necesitás y vos tenés algo que le sirve.</p><div class="community-stamp">ENTRE<br>VECINOS<br><b>♥</b></div></div>
-      <div class="community-actions">
-        <a class="action-card" href="#publicar"><span class="action-icon">⌕</span><span><b>Necesito encontrar</b><small>Busco un oficio, servicio o solución.</small></span><span class="action-arrow">↗</span></a>
-        <a class="action-card" href="#publicar"><span class="action-icon">✳</span><span><b>Ofrezco lo que sé hacer</b><small>Publico mi oficio, experiencia o habilidad.</small></span><span class="action-arrow">↗</span></a>
-        <a class="action-card" href="#publicar"><span class="action-icon">☏</span><span><b>Pregunto a los vecinos</b><small>¿Conocen a alguien que pueda ayudarme?</small></span><span class="action-arrow">↗</span></a>
-        <a class="action-card" href="#publicar"><span class="action-icon">⇄</span><span><b>Propongo un intercambio</b><small>Ofrezco algo a cambio de otra cosa.</small></span><span class="action-arrow">↗</span></a>
-        <a class="action-card" href="#publicar"><span class="action-icon">＋</span><span><b>Busco trabajo o personal</b><small>Una changa, una oportunidad o alguien para contratar.</small></span><span class="action-arrow">↗</span></a>
-        <a class="action-card" href="#publicar"><span class="action-icon">♡</span><span><b>Quiero recomendar</b><small>Compartí el dato de alguien que conocés.</small></span><span class="action-arrow">↗</span></a>
-      </div>
-    </section>
-
-    <section class="ad-section" aria-label="Espacios para comercios anunciantes">
-      <div class="ad-label">ESPACIO PARA COMERCIOS DEL CHAÑAR</div>
-      <div class="ad-content"><div><span class="section-kicker">PUBLICIDAD LOCAL</span><h2>Tu negocio también<br>puede estar acá.</h2><p>Un espacio visible para comercios, emprendimientos y empresas de nuestra localidad.</p></div><a href="#publicar" class="ad-button">Quiero anunciar <span>↗</span></a></div>
-      <div class="ad-note">Los espacios publicitarios estarán identificados. Pagar un anuncio no significa recibir una recomendación.</div>
-    </section>
-
-    <section class="publish-section" id="publicar">
-      <div><span class="section-kicker">HAGAMOS QUE CIRCULE</span><h2>El boca a boca<br>lo hacemos <em>entre todos.</em></h2><p>¿Tenés un oficio, buscás una solución o querés compartir un dato? Sumate a la primera comunidad de intercambio local.</p></div>
-      <div class="publish-panel"><div class="publish-panel-top"><span>✳</span><small>PARTICIPÁ</small></div><h3>Tu próximo contacto<br>puede estar acá.</h3><p>Estamos preparando el canal de publicaciones para recibir datos reales y revisarlos antes de mostrarlos.</p><a href="https://github.com/eliasmartinezcultural-glitch/boca-a-boca-" target="_blank" rel="noopener">Conocer el proyecto en GitHub ↗</a><small class="panel-foot">Próximamente: formulario de publicación y contacto directo.</small></div>
-    </section>
-  </main>
-
-  <footer class="footer"><a class="brand footer-brand" href="#"><span class="brand-mark">↗</span><span><strong>boca<span>a</span>boca</strong><small>SAN PATRICIO DEL CHAÑAR</small></span></a><p>Una comunidad que se da una mano.</p><div class="footer-bottom"><span>© 2026 Boca a Boca · San Patricio del Chañar</span><span>Una iniciativa independiente desarrollada por Elías Martínez · Ocarina Producciones</span></div></footer>
-  <script src="app.js"></script>
-</body>
-</html>
+<html lang="es-AR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#173d32">
+<meta name="description" content="Agenda local de oficios, profesionales y servicios de San Patricio del Chañar y alrededores.">
+<title>Boca a Boca | Agenda local de oficios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+</head><body>
+<div class="top-strip"><span>AGENDA LOCAL DE OFICIOS Y SERVICIOS</span><span>San Patricio del Chañar · Neuquén</span></div>
+<header class="header"><a class="brand" href="#" aria-label="Boca a Boca, inicio"><span class="brand-symbol">b.</span><span class="brand-name">boca<span>a</span>boca<small>AGENDA LOCAL</small></span></a><nav class="nav"><a href="#categorias">Categorías</a><a href="#agenda">La agenda</a><a href="#anunciar">Anunciar</a></nav><a class="header-button" href="#sumar">Sumar mi servicio <span>↗</span></a></header>
+<main>
+<section class="hero"><div class="hero-content"><div class="eyebrow"><span class="eyebrow-dot"></span> EL CHAÑAR TIENE DE TODO</div><h1>Encontrá a quien<br>estás <em>buscando.</em></h1><p>Oficios, profesionales y servicios de nuestra zona. Un lugar simple para encontrar el contacto que necesitás.</p><a class="hero-scroll" href="#agenda">Explorar la agenda <span>↓</span></a><div class="hero-proof"><span class="proof-icon">⌕</span><span><b>Un solo lugar.</b><br>Contactos directos, sin vueltas.</span></div></div>
+<div class="hero-visual" aria-hidden="true"><div class="hero-sun"></div><div class="hero-ring ring-a"></div><div class="hero-ring ring-b"></div><div class="hero-note note-one"><span>🔧</span><b>Un oficio</b><small>que resuelve</small></div><div class="hero-note note-two"><span>🪡</span><b>Un talento</b><small>que encontrás</small></div><div class="hero-note note-three"><span>🏡</span><b>De nuestra zona</b><small>para nuestra gente</small></div><div class="hero-seal"><span>CH</span><small>EL CHAÑAR<br>SE CONECTA</small></div><span class="hero-star star-one">✳</span><span class="hero-star star-two">✳</span></div></section>
+<section class="search-section" id="agenda"><div class="section-top"><div><span class="kicker">BUSCÁ EN LA AGENDA</span><h2>¿Qué necesitás resolver?</h2><p>Escribí un oficio o elegí una categoría.</p></div><div class="location-pill"><span>●</span> San Patricio del Chañar y alrededores</div></div>
+<form class="search-box" id="searchForm" role="search"><span class="search-glass">⌕</span><input id="searchInput" type="search" placeholder="Ej.: electricista, costurera, flete..." aria-label="Buscar en la agenda" autocomplete="off"><button type="submit">Buscar <span>→</span></button></form>
+<div class="popular-searches"><span>BUSCÁ RÁPIDO</span><div id="quickSearches"></div></div>
+<div class="directory-heading" id="categorias"><div><span class="kicker">EXPLORÁ POR RUBRO</span><h3>Una categoría para cada necesidad</h3></div><button class="clear-button" id="showAll" type="button">Ver todas <span>↗</span></button></div>
+<div class="category-grid" id="categoryGrid" aria-live="polite"></div>
+<div class="directory-results" id="directoryResults"><div class="results-title"><div><span class="kicker">CONTACTOS DISPONIBLES</span><h3 id="resultsHeading">Personas y servicios de la zona</h3></div><span class="result-count" id="resultCount">0 contactos</span></div><div class="provider-grid" id="providerGrid"></div><div class="empty-state" id="emptyState"><div class="empty-illustration">⌕</div><h4>Estamos armando esta agenda.</h4><p>Pronto vas a encontrar acá los contactos de trabajadores, profesionales y comercios de la zona.</p><a href="#sumar">¿Ofrecés un servicio? Sumate a la agenda →</a></div></div></section>
+<section class="ad-band" id="anunciar"><div class="ad-band-copy"><span class="ad-eyebrow">ESPACIO PUBLICITARIO · 01</span><h2>Tu negocio merece<br>un lugar <em>visible.</em></h2><p>Publicidad local para comercios, emprendimientos y empresas que quieren llegar a la gente de San Patricio.</p><a href="#sumar" class="ad-cta">Conocé los espacios <span>↗</span></a></div><div class="ad-art" aria-hidden="true"><div class="ad-art-circle"></div><div class="ad-art-card"><span>ANUNCIÁ</span><b>Acá te<br>encuentran.</b><small>BOCA A BOCA · AGENDA LOCAL</small></div><span class="ad-art-spark">✳</span></div><div class="ad-disclaimer">Los anuncios pagos se identificarán como publicidad y no representan una recomendación ni una garantía del servicio.</div></section>
+<section class="how-section"><div class="how-heading"><span class="kicker">FÁCIL, COMO TIENE QUE SER</span><h2>Encontrar. Contactar.<br><em>Solucionar.</em></h2><p>Sin crear una cuenta, sin vueltas y sin intermediarios.</p></div><div class="steps"><article class="step"><span class="step-number">01</span><span class="step-icon">⌕</span><h3>Buscá</h3><p>Encontrá un rubro o escribí qué necesitás.</p></article><article class="step"><span class="step-number">02</span><span class="step-icon">▤</span><h3>Elegí</h3><p>Revisá la información de cada prestador.</p></article><article class="step"><span class="step-number">03</span><span class="step-icon">↗</span><h3>Contactá</h3><p>Hablá directamente con la persona o comercio.</p></article></div></section>
+<section class="join-section" id="sumar"><div class="join-copy"><span class="kicker light-kicker">LA AGENDA CRECE CON VOS</span><h2>¿Ofrecés un oficio<br>o un <em>servicio?</em></h2><p>Queremos sumar trabajadores, profesionales, comercios y empresas de San Patricio y de localidades cercanas que trabajen en la zona.</p><div class="join-note"><span>✓</span> La publicación básica será gratuita y revisada antes de aparecer.</div></div><div class="join-card"><div class="join-card-top"><span class="join-icon">＋</span><span class="join-label">SUMÁ TU CONTACTO</span></div><h3>Tu trabajo también<br>puede estar acá.</h3><p>Estamos preparando el formulario de inscripción. La agenda no publica datos sin autorización.</p><div class="join-status"><span></span> Inscripciones en preparación</div><a href="https://github.com/eliasmartinezcultural-glitch/boca-a-boca-" target="_blank" rel="noopener">Conocer el proyecto ↗</a></div></section>
+</main>
+<footer class="footer"><div class="footer-main"><a class="brand footer-brand" href="#"><span class="brand-symbol">b.</span><span class="brand-name">boca<span>a</span>boca<small>AGENDA LOCAL</small></span></a><p>El contacto que buscás, más cerca.</p><a href="#agenda" class="back-top">Volver arriba ↑</a></div><div class="footer-bottom"><span>© 2026 Boca a Boca · San Patricio del Chañar</span><span>Una iniciativa independiente · Desarrollada por Elías Martínez / Ocarina Producciones</span></div></footer>
+<script src="agenda.js"></script><script src="app.js"></script></body></html>
