@@ -50,7 +50,7 @@ function renderProviders(){
   const phone=String(p.whatsapp||"").replace(/[^0-9]/g,"");
   const contact=phone?'<a class="provider-contact" href="https://wa.me/'+phone+'" target="_blank" rel="noopener">WhatsApp <span>↗</span></a>':(p.telefonoVisible?'<a class="provider-contact" href="tel:'+safe(p.telefonoVisible)+'">Llamar <span>↗</span></a>':"");
   const image=p.imagen?'<img class="provider-image" src="'+safe(p.imagen)+'" alt="" loading="lazy">':'<div class="provider-image provider-image-placeholder">'+safe((p.nombre||"B").trim().charAt(0).toUpperCase())+'</div>';
-  return '<article class="provider-card '+(p.destacado?'provider-featured':'')+'">'+image+'<div class="provider-card-content"><div class="provider-tags"><span class="provider-badge">'+(p.local?"Prestador local":"Trabaja en Chañar")+'</span>'+(p.destacado?'<span class="featured-badge">DESTACADO</span>':"")+'</div><h4>'+safe(p.nombre)+'</h4><div class="provider-meta">'+safe(p.rubro||"Servicio")+' · '+safe(p.localidad||"Zona de cobertura")+'</div><p>'+safe(p.descripcion||"Consultá disponibilidad y detalles del servicio.")+'</p>'+contact+'</div></article>';
+  return '<article class="provider-card '+(p.destacado?'provider-featured':'')+'">'+image+'<div class="provider-card-content"><div class="provider-tags"><span class="provider-badge">'+(p.agenda?"Contacto publicado":(p.local?"Prestador local":"Trabaja en Chañar"))+'</span>'+(p.destacado?'<span class="featured-badge">DESTACADO</span>':"")+'</div><h4>'+safe(p.nombre)+'</h4><div class="provider-meta">'+safe(p.rubro||"Servicio")+' · '+safe(p.localidad||"Zona de cobertura")+'</div><p>'+safe(p.descripcion||"Consultá disponibilidad y detalles del servicio.")+'</p>'+contact+'</div></article>';
  }).join("");
  empty.hidden=list.length>0;
 }
@@ -68,3 +68,4 @@ document.querySelector("#showAll").addEventListener("click",()=>{input.value="";
 document.querySelector("#quickSearches").addEventListener("click",e=>{const b=e.target.closest("[data-search]");if(!b)return;input.value=b.dataset.search;selectedCategory="";renderAll();document.querySelector("#directoryResults").scrollIntoView({behavior:"smooth",block:"start"});});
 grid.addEventListener("click",e=>{const b=e.target.closest("[data-category]");if(!b)return;selectedCategory=selectedCategory===b.dataset.category?"":b.dataset.category;input.value="";renderAll();document.querySelector("#directoryResults").scrollIntoView({behavior:"smooth",block:"start"});});
 renderAds();renderAll();
+window.bocaRenderProviders=renderProviders;
